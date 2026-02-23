@@ -1,0 +1,119 @@
+# Busca Koha - Translation Template
+# Copyright (C) 2026 CTINF / Ibram
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Busca Koha 4.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/ibram/koha-search/issues\n"
+"POT-Creation-Date: 2026-02-23 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: includes/Core/Plugin.php
+msgid "Configurações"
+msgstr ""
+
+#: includes/Core/Plugin.php
+msgid "Documentação Koha API"
+msgstr ""
+
+#: includes/Admin/Admin_Controller.php
+msgid "Busca Koha"
+msgstr ""
+
+#: includes/Admin/Admin_Controller.php
+msgid "Conexão"
+msgstr ""
+
+#: includes/Admin/Admin_Controller.php
+msgid "Bibliotecas"
+msgstr ""
+
+#: includes/Admin/Admin_Controller.php
+msgid "Busca"
+msgstr ""
+
+#: includes/Admin/Admin_Controller.php
+msgid "Aparência"
+msgstr ""
+
+#: includes/Admin/Admin_Controller.php
+msgid "Ajuda"
+msgstr ""
+
+#: templates/search-form.php
+msgid "Pesquise em nosso acervo"
+msgstr ""
+
+#: templates/search-form.php
+msgid "O que você procura?"
+msgstr ""
+
+#: templates/search-form.php
+msgid "Buscar"
+msgstr ""
+
+#: templates/search-form.php
+msgid "Autoridades"
+msgstr ""
+
+#: templates/search-form.php
+msgid "Todas as bibliotecas"
+msgstr ""
+
+#: includes/Frontend/Asset_Loader.php
+msgid "Buscando..."
+msgstr ""
+
+#: includes/Frontend/Asset_Loader.php
+msgid "Nenhum resultado encontrado."
+msgstr ""
+
+#: includes/Frontend/Asset_Loader.php
+msgid "Ocorreu um erro na busca. Tente novamente."
+msgstr ""
+
+#: includes/Frontend/Asset_Loader.php
+msgid "resultados encontrados"
+msgstr ""
+
+#: includes/Frontend/Asset_Loader.php
+msgid "Página"
+msgstr ""
+
+#: includes/Frontend/Asset_Loader.php
+msgid "Anterior"
+msgstr ""
+
+#: includes/Frontend/Asset_Loader.php
+msgid "Próximo"
+msgstr ""
+
+#: includes/Services/Search_Service.php
+msgid "Palavra-chave"
+msgstr ""
+
+#: includes/Services/Search_Service.php
+msgid "Título"
+msgstr ""
+
+#: includes/Services/Search_Service.php
+msgid "Autor"
+msgstr ""
+
+#: includes/Services/Search_Service.php
+msgid "Assunto"
+msgstr ""
+
+#: includes/Services/Search_Service.php
+msgid "ISBN"
+msgstr ""
+
+#: includes/Services/Search_Service.php
+msgid "Relevância"
+msgstr ""

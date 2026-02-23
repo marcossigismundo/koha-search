@@ -1,0 +1,398 @@
+/**
+ * Busca Koha - Admin Styles v4.0.0
+ */
+
+/* ── Page Layout ──────────────────────────────────────────────────── */
+
+.bk-admin-wrap {
+    max-width: 960px;
+}
+
+.bk-admin-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 23px;
+    margin-bottom: 16px;
+}
+
+.bk-admin-title .dashicons {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: #366AAC;
+}
+
+.bk-version {
+    font-size: 12px;
+    font-weight: 400;
+    color: #999;
+    background: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────────────── */
+
+.bk-tabs .nav-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.bk-tabs .nav-tab .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.bk-tabs .nav-tab-active {
+    color: #366AAC;
+}
+
+/* ── Card ─────────────────────────────────────────────────────────── */
+
+.bk-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 24px;
+    margin-top: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.bk-card-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 8px;
+    font-size: 20px;
+    color: #1d2327;
+}
+
+.bk-card-title .dashicons {
+    color: #366AAC;
+}
+
+.bk-card-description {
+    color: #646970;
+    margin: 0 0 20px;
+    font-size: 14px;
+}
+
+/* ── Button Row ───────────────────────────────────────────────────── */
+
+.bk-button-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.bk-button-row .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+    margin-right: 2px;
+}
+
+/* ── Libraries Table ──────────────────────────────────────────────── */
+
+.bk-libraries-table {
+    margin-top: 0;
+}
+
+.bk-libraries-table .bk-col-code {
+    width: 120px;
+}
+
+.bk-libraries-table .bk-col-actions {
+    width: 100px;
+    text-align: right;
+}
+
+.bk-libraries-table .bk-col-actions .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.bk-libraries-table .button-small {
+    padding: 2px 6px;
+}
+
+.bk-libraries-count {
+    color: #646970;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.bk-last-import {
+    color: #646970;
+    font-size: 13px;
+    font-style: italic;
+}
+
+.bk-library-row.bk-editing td {
+    background: #fef9e7;
+}
+
+.bk-library-row input.bk-edit-input {
+    width: 100%;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+/* ── Auth type hints ──────────────────────────────────────────────── */
+
+.bk-auth-hint {
+    display: none;
+}
+
+[data-auth-type="oauth2"] .bk-auth-oauth2,
+[data-auth-type="basic"] .bk-auth-basic {
+    display: block;
+}
+
+/* ── Inline status ────────────────────────────────────────────────── */
+
+.bk-inline-status {
+    display: inline-block;
+    padding: 4px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.bk-inline-status.bk-status-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.bk-inline-status.bk-status-error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.bk-status-ok {
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.bk-status-error {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* ── Modal (Admin) ────────────────────────────────────────────────── */
+
+.bk-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100050;
+}
+
+.bk-modal.bk-modal--active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bk-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.bk-modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: 8px;
+    max-width: 540px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: bk-adminModalIn 0.2s ease;
+}
+
+@keyframes bk-adminModalIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.bk-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #ddd;
+}
+
+.bk-modal-header h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.bk-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    padding: 0 4px;
+}
+
+.bk-modal-close:hover {
+    color: #333;
+}
+
+.bk-modal-body {
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.bk-modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* ── Connection Test Steps ────────────────────────────────────────── */
+
+.bk-test-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.bk-test-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border-left: 3px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.bk-test-step.bk-step--ok {
+    border-left-color: #27ae60;
+    background: #f0fdf4;
+}
+
+.bk-test-step.bk-step--error {
+    border-left-color: #c0392b;
+    background: #fef2f2;
+}
+
+.bk-test-step.bk-step--pending {
+    border-left-color: #f0ad4e;
+}
+
+.bk-step-icon {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+
+.bk-step-label {
+    font-weight: 600;
+    min-width: 140px;
+}
+
+.bk-step-message {
+    color: #646970;
+    font-size: 13px;
+}
+
+.bk-test-summary {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.bk-test-summary.bk-summary-success {
+    background: #d4edda;
+    color: #155724;
+}
+
+.bk-test-summary.bk-summary-error {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* ── Help Grid ────────────────────────────────────────────────────── */
+
+.bk-help-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.bk-help-section h3 {
+    font-size: 16px;
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #366AAC;
+    color: #1d2327;
+}
+
+.bk-help-item {
+    margin-bottom: 20px;
+}
+
+.bk-help-item h4 {
+    margin: 0 0 6px;
+}
+
+.bk-links-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bk-links-list li {
+    margin-bottom: 8px;
+}
+
+.bk-links-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.bk-links-list a:hover {
+    text-decoration: underline;
+}
+
+.bk-links-list .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* ── Color Picker ─────────────────────────────────────────────────── */
+
+.bk-color-picker {
+    width: 80px;
+}

@@ -1,0 +1,384 @@
+/**
+ * Busca Koha - Public Styles v4.0.0
+ * Uses CSS custom properties for theming
+ */
+
+:root {
+    --bk-primary: #366AAC;
+    --bk-primary-light: #366AAC1a;
+    --bk-text: #333;
+    --bk-text-light: #666;
+    --bk-border: #ccc;
+    --bk-bg: #fff;
+    --bk-bg-alt: #EAEAEA;
+    --bk-error: #c0392b;
+    --bk-radius: 4px;
+    --bk-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --bk-transition: 0.2s ease;
+}
+
+/* ── Container ────────────────────────────────────────────────────── */
+
+.busca-koha-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.busca-koha-corpo {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* ── Search Box ───────────────────────────────────────────────────── */
+
+.busca-caixa-1 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--bk-bg);
+    border: 2px solid var(--bk-border);
+    box-shadow: var(--bk-shadow);
+    text-align: center;
+    border-radius: var(--bk-radius) var(--bk-radius) 0 0;
+}
+
+.busca-titulo p {
+    font-size: 18px;
+    color: var(--bk-text);
+    margin-bottom: 16px;
+    text-align: left;
+    font-weight: 500;
+}
+
+.busca-input-wrapper {
+    display: flex;
+    justify-content: left;
+}
+
+.busca-campo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 2px solid var(--bk-border);
+    background-color: var(--bk-bg-alt);
+    padding: 5px;
+    border-radius: var(--bk-radius);
+    transition: border-color var(--bk-transition);
+}
+
+.busca-campo:focus-within {
+    border-color: var(--bk-primary);
+}
+
+.busca-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    color: var(--bk-text);
+}
+
+.busca-botao {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--bk-primary);
+    border-radius: var(--bk-radius);
+    transition: background var(--bk-transition);
+}
+
+.busca-botao:hover {
+    background: var(--bk-primary-light);
+}
+
+/* ── Filters Bar ──────────────────────────────────────────────────── */
+
+.busca-caixa-2 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: transparent;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    border: 1px solid #e0e0e0;
+    border-top: none;
+    border-radius: 0 0 var(--bk-radius) var(--bk-radius);
+}
+
+.busca-por {
+    font-size: 16px;
+    color: var(--bk-primary);
+    margin: 0;
+    font-weight: 600;
+}
+
+.busca-por p {
+    margin: 0;
+}
+
+.botao-autoridade {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 2px solid var(--bk-primary);
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: var(--bk-bg);
+    color: var(--bk-primary);
+    border-radius: var(--bk-radius);
+    font-weight: 500;
+    transition: all var(--bk-transition);
+}
+
+.botao-autoridade:hover {
+    background-color: var(--bk-primary);
+    color: #fff;
+}
+
+.busca-biblioteca-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    background-color: var(--bk-primary);
+    padding: 8px 14px;
+    border-radius: var(--bk-radius);
+}
+
+.busca-label {
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
+    font-weight: 500;
+    vertical-align: middle;
+    padding: 0 0 16px 0;
+}
+
+.busca-select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid var(--bk-primary);
+    background-color: var(--bk-bg);
+    color: var(--bk-primary);
+    min-width: 240px;
+    height: 38px;
+    cursor: pointer;
+    border-radius: var(--bk-radius);
+}
+
+.busca-select:focus {
+    outline: 2px solid var(--bk-primary);
+    outline-offset: 2px;
+}
+
+/* ── Input States ─────────────────────────────────────────────────── */
+
+.busca-input:focus,
+.busca-input:active,
+.busca-input:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    background-color: var(--bk-bg-alt) !important;
+}
+
+.busca-input::-webkit-search-decoration,
+.busca-input::-webkit-search-cancel-button,
+.busca-input::-webkit-search-results-button,
+.busca-input::-webkit-search-results-decoration {
+    display: none !important;
+    -webkit-appearance: none !important;
+}
+
+.busca-input[type="search"] {
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.busca-input::-ms-clear,
+.busca-input::-ms-reveal {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+@keyframes busca-shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-6px); }
+    40% { transform: translateX(6px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+.busca-input--vazio {
+    animation: busca-shake 0.5s ease;
+    border-bottom: 2px solid var(--bk-error) !important;
+}
+
+/* ── Screen reader only ───────────────────────────────────────────── */
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    word-wrap: normal !important;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────── */
+
+/* ── Modal Trigger Button ─────────────────────────────────────── */
+
+.bk-modal-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background-color: var(--bk-primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--bk-radius);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--bk-transition);
+}
+
+.bk-modal-trigger:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.bk-modal-trigger svg {
+    flex-shrink: 0;
+}
+
+/* ── Modal Overlay ───────────────────────────────────────────── */
+
+.bk-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.bk-modal-overlay.bk-modal--open {
+    display: flex;
+}
+
+.bk-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 920px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--bk-bg);
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: bk-modal-in 0.25s ease-out;
+}
+
+@keyframes bk-modal-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.bk-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 10;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bk-text);
+    transition: background var(--bk-transition);
+}
+
+.bk-modal-close:hover {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* Inside modal, remove outer margins */
+.bk-modal-content .busca-koha-container {
+    margin-top: 0;
+}
+
+.bk-modal-content .busca-caixa-1 {
+    border-radius: 8px 8px 0 0;
+    border: none;
+    box-shadow: none;
+}
+
+.bk-modal-content .busca-caixa-2 {
+    border-radius: 0 0 8px 8px;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .busca-caixa-1,
+    .busca-caixa-2 {
+        padding: 16px;
+    }
+
+    .busca-caixa-2 {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .busca-biblioteca-wrapper {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .busca-select {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .bk-modal-overlay {
+        padding: 10px;
+    }
+
+    .bk-modal-content {
+        max-height: 95vh;
+    }
+}
