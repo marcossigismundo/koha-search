@@ -149,12 +149,15 @@
 
 .busca-biblioteca-wrapper {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: stretch;
+    gap: 0;
     flex-wrap: nowrap;
-    background-color: var(--bk-primary);
-    padding: 8px 14px;
+    background-color: transparent;
+    padding: 0;
     border-radius: var(--bk-radius);
+    border: 2px solid var(--bk-primary);
+    overflow: hidden;
+    height: 38px;
 }
 
 .busca-label {
@@ -162,25 +165,33 @@
     color: #fff;
     white-space: nowrap;
     font-weight: 500;
-    vertical-align: middle;
-    padding: 0 0 16px 0;
+    padding: 0 14px;
+    margin: 0;
+    background-color: var(--bk-primary);
+    display: flex;
+    align-items: center;
 }
 
 .busca-select {
-    padding: 8px 12px;
+    padding: 0 12px;
     font-size: 14px;
-    border: 1px solid var(--bk-primary);
+    border: none;
     background-color: var(--bk-bg);
     color: var(--bk-primary);
-    min-width: 240px;
-    height: 38px;
+    min-width: 200px;
+    height: 100%;
     cursor: pointer;
-    border-radius: var(--bk-radius);
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+    appearance: menulist;
+    background-image: none;
 }
 
 .busca-select:focus {
-    outline: 2px solid var(--bk-primary);
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: none;
 }
 
 /* ── Input States ─────────────────────────────────────────────────── */
